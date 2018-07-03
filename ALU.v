@@ -31,6 +31,7 @@ localparam NOR = 4'b0010;
 localparam ADD = 4'b0011;
 localparam SUB = 4'b0100;
 localparam INC = 4'b1001;
+localparam MULTPLUS = 4'b1010; //10
    
    always @ (A or B or ALUOperation)
      begin
@@ -47,6 +48,8 @@ localparam INC = 4'b1001;
 			ALUResult= ~(A|B);
 		  INC:
 		   ALUResult= A + 1'b1;
+		  MULTPLUS:
+			ALUResult = (A*B) + 1;
 		default:
 			ALUResult= 0;
 		endcase // case(control)

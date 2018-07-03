@@ -5,6 +5,7 @@
 	addi $t1,$zero,3
 	addi $t2,$zero,7
 	addi $t3,$zero,1
+# multplus $t7, $t0, $t1
 	 
 	# Moving values
 	add $s0,$t0,$zero
